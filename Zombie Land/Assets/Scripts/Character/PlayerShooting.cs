@@ -7,7 +7,7 @@ public class PlayerShooting : MonoBehaviour
 {
     [SerializeField] private Transform _bulletSpawnPoint;
     [SerializeField] private GameObject _bulletInstance;
-    [SerializeField] private float _attackSpeed, _recoilStrength;
+    [SerializeField] private float _attackSpeed, _recoilStrength, _recoilDuration, _reciolFrequency;
     [SerializeField] private ParticleSystem _muzzleFlash;
     [SerializeField] private RecoilCompressor _recoilCompressor;
 
@@ -45,6 +45,7 @@ public class PlayerShooting : MonoBehaviour
             Instantiate(_bulletInstance, _bulletSpawnPoint.position, transform.rotation);
 
             _recoilCompressor.AddRecoil(_recoilStrength);
+            CameraShaker.Default.Shake(_reciolFrequency, _recoilDuration);
         }
     }
 }
