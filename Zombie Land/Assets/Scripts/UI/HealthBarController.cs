@@ -8,6 +8,8 @@ public class HealthBarController : MonoBehaviour
     [SerializeField] private float _reduceDelay, _decreaceMod;
     [SerializeField] private Image _actualHealthBar, _deltaHealthBar;
 
+    [SerializeField] private GameObject _popUpDMGInstance;
+
     private float _targetHealthDelay = 1;
 
     private void Update()
@@ -20,6 +22,8 @@ public class HealthBarController : MonoBehaviour
         float delta = _dmg / _maxHP;
         _actualHealthBar.fillAmount -= delta;
         StartCoroutine(HealthReduceDelay(delta));
+
+        Instantiate(_popUpDMGInstance, transform).GetComponent<UIPopUpDMG>().SetUp(_dmg, false);
     }
 
     private IEnumerator HealthReduceDelay(float _delta)

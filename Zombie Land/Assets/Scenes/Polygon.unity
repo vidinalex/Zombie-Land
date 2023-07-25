@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733e7dd69dd0184eadad38681b7d412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHP: 100
+  _maxHP: 500
   _healthBarController: {fileID: 734210279}
 --- !u!1 &297421852
 GameObject:
@@ -1287,7 +1287,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -1304,10 +1304,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb160e14344eecf4281c84d5dfcbb78f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _reduceDelay: 0.5
-  _decreaceMod: 1
+  _reduceDelay: 0.1
+  _decreaceMod: 2
   _actualHealthBar: {fileID: 770626993}
   _deltaHealthBar: {fileID: 63983800}
+  _popUpDMGInstance: {fileID: 7107285798710545368, guid: 41b3546c4f234234d8bda0716b9b7e24, type: 3}
 --- !u!114 &734210280
 MonoBehaviour:
   m_ObjectHideFlags: 0
