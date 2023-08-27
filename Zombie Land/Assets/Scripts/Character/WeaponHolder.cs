@@ -11,6 +11,12 @@ public class WeaponHolder : MonoBehaviour
 
     private int _currentWeapon = 0;
 
+    private void Update()
+    {
+        if(Input.GetButtonDown("WeaponSwitch"))
+            NextWeapon();
+    }
+
     private void Start()
     {
         SwapWeapon(0);

@@ -149,6 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rectTransform: {fileID: 441179318770311356}
   _text: {fileID: 7892659637093664049}
-  _lifeTime: 2
-  _yMod: 4
+  _lifeTime: 1
+  _yMod: 10
   _xMod: 2
