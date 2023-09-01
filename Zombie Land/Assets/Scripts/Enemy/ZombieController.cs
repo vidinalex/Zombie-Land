@@ -6,6 +6,7 @@ public class ZombieController : MonoBehaviour, IDamagable
 {
     [SerializeField] private float _maxHP;
     [SerializeField] private HealthBarController _healthBarController;
+    [SerializeField] private ZombieRagdollController _ragdollController;
 
     private float _currentHP;
 
@@ -27,6 +28,9 @@ public class ZombieController : MonoBehaviour, IDamagable
 
     public void Die()
     {
-
+        if (_ragdollController)
+        {
+            _ragdollController.SetRagdoll(true);
+        }
     }
 }
