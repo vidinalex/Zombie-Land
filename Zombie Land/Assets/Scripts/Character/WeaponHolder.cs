@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponHolder : MonoBehaviour
 {
-    public System.Action<WeaponStruct.WeaponInfoStruct> WeaponChanged;
+    public System.Action<WeaponInfo> WeaponChanged;
 
     [SerializeField] private Transform _SHGrab_target, _SHGrab_hint;
     [SerializeField] private WeaponInfo[] _weaponInstances;
@@ -29,14 +29,10 @@ public class WeaponHolder : MonoBehaviour
     }
     public void SwapWeapon(int _weaponIndex)
     {
-        if(_weaponIndex >= _weaponInstances.Length)
-        {
-            Debug.LogError("Choosen weapon index is out of bounds");
-            return;
-        }
+        
         UnequipAll();
-        _weaponInstances[_weaponIndex].gameObject.SetActive(true);
-        WeaponChanged?.Invoke(_weaponInstances[_weaponIndex]._weaponInfo);
+        _weaponInstances[_weaponIndex % _weaponInstances.Length].gameObject.SetActive(true);
+        WeaponChanged?.Invoke(_weaponInstances[_weaponIndex % _weaponInstances.Length]);
     }
 
     private void UnequipAll()

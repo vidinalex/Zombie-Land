@@ -342,12 +342,12 @@ Transform:
   m_GameObject: {fileID: 2425261350743306978}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: -0, z: -0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 12.990382, z: -12.940001}
+  m_LocalPosition: {x: 0, y: 12.990381, z: -12.939999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6748430333770045599}
-  m_LocalEulerAnglesHint: {x: 35.166, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!20 &6161991610720458857
 Camera:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
@@ -869,7 +869,7 @@ Transform:
   m_GameObject: {fileID: 3772176452779800942}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: -0, z: -0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 12.990382, z: -12.940001}
+  m_LocalPosition: {x: 0, y: 12.990381, z: -12.939999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6020,6 +6020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cameraMain: {fileID: 0}
+  _plCharaTransform: {fileID: 6337257207145690968}
 --- !u!1 &7199519983396697778
 GameObject:
   m_ObjectHideFlags: 0
@@ -10993,7 +10994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0
+  m_LookaheadTime: 0.5
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
   m_XDamping: 1
@@ -11743,7 +11744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 133512, guid: 80cf54b3b2c8e7e43a80c62f98a0fefe, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 134110, guid: 80cf54b3b2c8e7e43a80c62f98a0fefe, type: 3}
       propertyPath: m_Layer
@@ -11811,7 +11812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164222, guid: 80cf54b3b2c8e7e43a80c62f98a0fefe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 170760, guid: 80cf54b3b2c8e7e43a80c62f98a0fefe, type: 3}
       propertyPath: m_Layer

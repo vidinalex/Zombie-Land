@@ -6,6 +6,7 @@ using UnityEngine;
 public class ZombieRagdollController : MonoBehaviour
 {
     [SerializeField] private List<Collider> _ragdollRegions;
+    [SerializeField] private List<Rigidbody> _ragdollRbs;
     [SerializeField] private Animator _characterAnimator;
     [SerializeField] private AIPath _characterAIPath;
     [SerializeField] private Collider _characterMainCollider;
@@ -14,22 +15,22 @@ public class ZombieRagdollController : MonoBehaviour
 
     public void SetRagdoll(bool state)
     {
+        _characterRB.isKinematic = state;
+        _characterMainCollider.enabled = !state;
         _characterAnimator.enabled = !state;
-        _characterRB.isKinematic = !state;
+
         foreach (Collider c in _ragdollRegions)
         {
             c.enabled = state;
         }
+        foreach (Rigidbody rb in _ragdollRbs)
+        {
+            rb.isKinematic = !state;
+        }
+
         _characterAIPath.enabled = !state;
         _characterHealth.SetActive(!state);
-        StartCoroutine(WaitAndDiasbleMainCollider(state));
-    }
-
-    private IEnumerator WaitAndDiasbleMainCollider(bool state)
-    {
-        yield return new WaitForSeconds(0.1f);
-        _characterMainCollider.enabled = !state;
-    }
+    }    
 
     [ContextMenu("SetRagdollTrue")]
     private void SetRagdollTrue()

@@ -21,7 +21,14 @@ public class HealthBarController : MonoBehaviour
     {
         float delta = _dmg / _maxHP;
         _actualHealthBar.fillAmount -= delta;
-        StartCoroutine(HealthReduceDelay(delta));
+        try
+        {
+            StartCoroutine(HealthReduceDelay(delta));
+        }
+        catch
+        {
+
+        }
 
         if(_popUpDMGInstance)
         Instantiate(_popUpDMGInstance, transform).GetComponent<UIPopUpDMG>().SetUp(_dmg, false);

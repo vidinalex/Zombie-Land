@@ -8,6 +8,7 @@ public class Manager : MonoBehaviour
     #endregion
 
     [SerializeField] private Camera _cameraMain;
+    [SerializeField] private Transform _plCharaTransform;
 
     private void Awake()
     {
@@ -20,5 +21,10 @@ public class Manager : MonoBehaviour
     public Camera GetMainCamera()
     {
         return _cameraMain;
+    }
+
+    public Transform GetPlayerCharacterTransform()
+    {
+        return _plCharaTransform;
     }
 }
