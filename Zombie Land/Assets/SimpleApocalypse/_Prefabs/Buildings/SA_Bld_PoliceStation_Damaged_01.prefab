@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &481028
 Transform:
@@ -95,12 +95,12 @@ GameObject:
   - component: {fileID: 3372964}
   - component: {fileID: 2350040}
   - component: {fileID: 3268739169466892181}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Bld_PoliceStation_Damaged_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &450232
 Transform:
@@ -202,12 +202,12 @@ GameObject:
   - component: {fileID: 447898}
   - component: {fileID: 3328062}
   - component: {fileID: 2384122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Bld_PoliceStation_Extras_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &447898
 Transform:

@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 445380}
   - component: {fileID: 3336146}
   - component: {fileID: 2385924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Bld_OfficeWhite_Growth_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &445380
 Transform:
@@ -94,12 +94,13 @@ GameObject:
   - component: {fileID: 423184}
   - component: {fileID: 3306974}
   - component: {fileID: 2329904}
-  m_Layer: 0
+  - component: {fileID: 857652972233218968}
+  m_Layer: 8
   m_Name: SA_Bld_OfficeWhite_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &423184
 Transform:
@@ -167,3 +168,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &857652972233218968
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167982}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 21888a0e8300f2d40ae969e9e17c455f, type: 3}

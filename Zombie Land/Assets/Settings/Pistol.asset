@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b55803470f8e43b6b56f026ff9443fa, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
+  Index: 0
   InitialAmmoAmount: 99999
   AmmoAmountMod: 0
   InitialDMG: 20
   DamageMod: 5
+  _attackSpeed: 1
+  _recoilStrength: 0.5
+  _recoilDuration: 0.1
+  _reciolFrequency: 1.5

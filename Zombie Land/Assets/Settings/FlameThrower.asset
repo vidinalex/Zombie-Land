@@ -17,3 +17,7 @@ MonoBehaviour:
   AmmoAmountMod: 100
   InitialDMG: 2
   DamageMod: 1
+  _attackSpeed: 0.1
+  _recoilStrength: 0
+  _recoilDuration: 0
+  _reciolFrequency: 0

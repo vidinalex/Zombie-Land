@@ -13,8 +13,10 @@ public class WeaponHolder : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButtonDown("WeaponSwitch"))
+        if(Input.GetButtonDown("WeaponSwitchNext"))
             NextWeapon();
+        if (Input.GetButtonDown("WeaponSwitchPrevious"))
+            PreviousWeapon();
     }
 
     private void Start()
@@ -26,6 +28,12 @@ public class WeaponHolder : MonoBehaviour
     private void NextWeapon()
     {
         SwapWeapon(++_currentWeapon);
+    }
+    [ContextMenu("Previous Weapon")]
+    private void PreviousWeapon()
+    {
+        _currentWeapon += _weaponInstances.Length - 1;
+        SwapWeapon(_currentWeapon);
     }
     public void SwapWeapon(int _weaponIndex)
     {

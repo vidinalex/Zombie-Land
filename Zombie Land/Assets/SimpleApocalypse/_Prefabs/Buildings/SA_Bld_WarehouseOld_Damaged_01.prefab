@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 491316}
   - component: {fileID: 3331262}
   - component: {fileID: 2301710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Bld_WarehouseOld_Growth_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &491316
 Transform:
@@ -94,12 +94,13 @@ GameObject:
   - component: {fileID: 409560}
   - component: {fileID: 3305870}
   - component: {fileID: 2349616}
-  m_Layer: 0
+  - component: {fileID: 4560785419114116030}
+  m_Layer: 8
   m_Name: SA_Bld_WarehouseOld_Damaged_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &409560
 Transform:
@@ -168,6 +169,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4560785419114116030
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185448}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 29c0ff30f7492a74fbe0f3dac748885f, type: 3}
 --- !u!1 &186906
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,12 +202,12 @@ GameObject:
   - component: {fileID: 421042}
   - component: {fileID: 3334098}
   - component: {fileID: 2378598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Bld_WarehouseOld_Extras_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &421042
 Transform:

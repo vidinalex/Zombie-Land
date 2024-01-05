@@ -13,7 +13,7 @@ public class ZombieController : MonoBehaviour, IDamagable
     private float _currentHP, currentAttackTime;
     private Transform destinationTarget;
 
-    private const float MIN_ATTACK_DIST = 1.5f, ATTACK_DELAY = 0.3f;
+    private const float MIN_ATTACK_DIST = 2f, ATTACK_DELAY = 0.3f;
 
     private void Start()
     {

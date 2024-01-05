@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 482536}
   - component: {fileID: 3314794}
   - component: {fileID: 2344410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Bld_Motel_Damaged_Growth_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,8 @@ GameObject:
   - component: {fileID: 425762}
   - component: {fileID: 3368638}
   - component: {fileID: 2368794}
-  m_Layer: 0
+  - component: {fileID: 6408388459213969473}
+  m_Layer: 8
   m_Name: SA_Bld_Motel_Damaged_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,6 +169,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6408388459213969473
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175700}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d79cb0350f78f2c4ca9d2bd41118bf2a, type: 3}
 --- !u!1 &177138
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +202,7 @@ GameObject:
   - component: {fileID: 431448}
   - component: {fileID: 3313376}
   - component: {fileID: 2330698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SA_Bld_Motel_Damaged_Extras_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

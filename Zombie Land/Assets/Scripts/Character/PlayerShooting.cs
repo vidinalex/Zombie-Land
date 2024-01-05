@@ -27,6 +27,7 @@ public class PlayerShooting : MonoBehaviour
         _currentWeaponInfo = _weaponInfo;
 
         UIWeaponManager.Default.SetActiveWeapon(_currentWeaponInfo._weaponInfo._weaponParams.Index);
+        _elapsedTime = 0;
     }
 
     private void Update()
@@ -60,11 +61,11 @@ public class PlayerShooting : MonoBehaviour
     {
         if (_elapsedTime <= 0)
         {
-            _elapsedTime = _currentWeaponInfo._weaponInfo._attackSpeed;
+            _elapsedTime = _currentWeaponInfo._weaponInfo._weaponParams._attackSpeed;
             Instantiate(_currentWeaponInfo._weaponInfo._bulletInstance, _currentWeaponInfo._weaponInfo._bulletSpawnPoint.position, transform.rotation);
 
-            _recoilCompressor.AddRecoil(_currentWeaponInfo._weaponInfo._recoilStrength);
-            CameraShaker.Default.Shake(_currentWeaponInfo._weaponInfo._reciolFrequency, _currentWeaponInfo._weaponInfo._recoilDuration);
+            _recoilCompressor.AddRecoil(_currentWeaponInfo._weaponInfo._weaponParams._recoilStrength);
+            CameraShaker.Default.Shake(_currentWeaponInfo._weaponInfo._weaponParams._reciolFrequency, _currentWeaponInfo._weaponInfo._weaponParams._recoilDuration);
 
             _currentWeaponInfo.ReduceAmmo(1);
         }

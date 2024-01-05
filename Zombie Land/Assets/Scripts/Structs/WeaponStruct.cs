@@ -8,7 +8,6 @@ public static class WeaponStruct
     {
         [SerializeField] public Transform _bulletSpawnPoint;
         [SerializeField] public GameObject _bulletInstance;
-        [SerializeField] public float _attackSpeed, _recoilStrength, _recoilDuration, _reciolFrequency;
         [SerializeField] public ParticleSystem _muzzleFlash;
         [SerializeField] public WeaponParams _weaponParams;
     }
