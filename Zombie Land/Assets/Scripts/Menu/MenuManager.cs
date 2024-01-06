@@ -13,6 +13,16 @@ public class MenuManager : MonoBehaviour
         _default = this;
 
         Application.targetFrameRate = 300;
+
+        if(PlayerPrefs.GetInt(PREFS_FIRST_LAUNCH, 0) == 0)
+        {
+            PlayerPrefs.SetInt(PREFS_FIRST_LAUNCH, 1);
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 0, 1);
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 0 + PREFS_UPGRADE_NAME + 2, 1);
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 0 + PREFS_UPGRADE_NAME + 1, 3);
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 1, 1);
+            PlayerPrefs.SetInt("Money", 4000);
+        }
     }
     #endregion
 
@@ -20,6 +30,10 @@ public class MenuManager : MonoBehaviour
     private GameObject[] _stagesPool;
 
     private Stack<GameObject> _stagesStack = new Stack<GameObject>();
+    private const string
+        PREFS_FIRST_LAUNCH = "FirstLaunch",
+        PREFS_WEAPON_NAME = "Weapon",
+        PREFS_UPGRADE_NAME = "Upgrade";
 
     private void Start()
     {
