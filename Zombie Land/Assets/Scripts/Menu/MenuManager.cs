@@ -22,6 +22,10 @@ public class MenuManager : MonoBehaviour
             PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 0 + PREFS_UPGRADE_NAME + 1, 3);
             PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 1, 1);
             PlayerPrefs.SetInt("Money", 4000);
+
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 2, 1);
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 3, 1);
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 4, 1);
         }
     }
     #endregion

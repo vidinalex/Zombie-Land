@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class BuyingElement : MonoBehaviour
 {
+    public Action StateUpdated;
+
     [SerializeField]
     private Button[] _upgradeBtnPool;
     [SerializeField]
@@ -30,6 +32,22 @@ public class BuyingElement : MonoBehaviour
     private const string PREFS_WEAPON_NAME = "Weapon", PREFS_UPGRADE_NAME = "Upgrade";
 
     private int _currentMoney;
+    private WeaponComponentsController _weaponComponentsController;
+
+    private void Awake()
+    {
+        _weaponComponentsController = FindAnyObjectByType<WeaponComponentsController>(FindObjectsInactive.Include);
+    }
+
+    private void OnEnable()
+    {
+        _weaponComponentsController.StateUpdated += UpgradeState;
+    }
+
+    private void OnDisable()
+    {
+        _weaponComponentsController.StateUpdated -= UpgradeState;
+    }
 
     private void Start()
     {
@@ -56,7 +74,7 @@ public class BuyingElement : MonoBehaviour
                 }
                 else
                 {
-                    _upgradeBtnPool[i].interactable = true;
+                    _upgradeBtnPool[i].interactable = false;
                 }
             }
             else if (state == _maxUpgradeLevel[i])
@@ -95,5 +113,7 @@ public class BuyingElement : MonoBehaviour
         PlayerPrefs.SetInt(PREFS_WEAPON_NAME + _weaponIndex + PREFS_UPGRADE_NAME + index, ++state);
 
         UpgradeState();
+
+        StateUpdated?.Invoke();
     }
 }
