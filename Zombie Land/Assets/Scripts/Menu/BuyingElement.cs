@@ -42,6 +42,7 @@ public class BuyingElement : MonoBehaviour
     private void OnEnable()
     {
         _weaponComponentsController.StateUpdated += UpgradeState;
+        UpgradeState();
     }
 
     private void OnDisable()
@@ -99,7 +100,7 @@ public class BuyingElement : MonoBehaviour
                 }
                 else
                 {
-                    _upgradeBtnPool[i].interactable = true;
+                    _upgradeBtnPool[i].interactable = false;
                 }
             }
         }
