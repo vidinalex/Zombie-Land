@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StageWeaponController : MonoBehaviour
+public class StageWeaponController : MonoBehaviour, IObserveSetter
 {
     [SerializeField]
     private GameObject[] _rootWeaponPool, _buyingElementsPool;
@@ -11,17 +11,17 @@ public class StageWeaponController : MonoBehaviour
 
     private void Start()
     {
-        SetObservableWeapon(1);
+        SetObservable(1);
     }
 
-    public void SetObservableWeapon(int index)
+    public void SetObservable(int index)
     {
         index--;
-        foreach(GameObject rootWeapon in _rootWeaponPool)
+        foreach (GameObject rootWeapon in _rootWeaponPool)
         {
             rootWeapon.SetActive(false);
         }
-        foreach(GameObject buyingElement in _buyingElementsPool)
+        foreach (GameObject buyingElement in _buyingElementsPool)
         {
             buyingElement.SetActive(false);
         }

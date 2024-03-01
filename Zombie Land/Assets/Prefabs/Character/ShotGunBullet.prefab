@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1192499774969267863}
   - component: {fileID: 2168051525598261781}
   - component: {fileID: 6193100669738926377}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Bullet (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.10416671
+        value: 0.23908737
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 6783123684948053793}
   - component: {fileID: 2119998820413549986}
   - component: {fileID: 5703462892354657469}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Bullet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.10416671
+        value: 0.23908737
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 3038859601619818136}
   - component: {fileID: 7128941870289496076}
   - component: {fileID: 3914979479006836979}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +692,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.10416671
+        value: 0.23908737
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -807,7 +807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2429334007093800297}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ShotGunBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,9 +841,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2429334007093800297}
     m_Modifications:
+    - target: {fileID: 1199387749997026, guid: 0e56aef02a6fcc6408400ea7c75e13a7, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1792092052645256, guid: 0e56aef02a6fcc6408400ea7c75e13a7, type: 3}
       propertyPath: m_Name
       value: FX_Gunshot_Shotgun_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792092052645256, guid: 0e56aef02a6fcc6408400ea7c75e13a7, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880413776039800, guid: 0e56aef02a6fcc6408400ea7c75e13a7, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4573121468440114, guid: 0e56aef02a6fcc6408400ea7c75e13a7, type: 3}
       propertyPath: m_LocalScale.x

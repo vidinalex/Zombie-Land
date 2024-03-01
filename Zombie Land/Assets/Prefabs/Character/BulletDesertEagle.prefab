@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6617973975568617447}
   - component: {fileID: 2552018238163060575}
   - component: {fileID: 3268620933633482559}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BulletDesertEagle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.10416671
+        value: 0.22321433
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -275,9 +275,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4811951291808043673}
     m_Modifications:
+    - target: {fileID: 1199387749997026, guid: 0e56aef02a6fcc6408400ea7c75e13a7, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1792092052645256, guid: 0e56aef02a6fcc6408400ea7c75e13a7, type: 3}
       propertyPath: m_Name
       value: FX_Gunshot_Shotgun_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792092052645256, guid: 0e56aef02a6fcc6408400ea7c75e13a7, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880413776039800, guid: 0e56aef02a6fcc6408400ea7c75e13a7, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4573121468440114, guid: 0e56aef02a6fcc6408400ea7c75e13a7, type: 3}
       propertyPath: m_LocalScale.x

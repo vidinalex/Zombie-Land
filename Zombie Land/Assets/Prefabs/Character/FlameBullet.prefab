@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9078118698833518834}
   - component: {fileID: 1123097661143106545}
   - component: {fileID: 8574493698359381131}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FlameBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5544652949808474288}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FlameBullet
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}

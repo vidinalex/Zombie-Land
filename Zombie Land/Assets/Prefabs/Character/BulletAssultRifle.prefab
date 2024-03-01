@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6617973975568617447}
   - component: {fileID: 2552018238163060575}
   - component: {fileID: 3268620933633482559}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BulletAssultRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.10416671
+        value: 0.22321433
         inSlope: 0
         outSlope: 0
         tangentMode: 0

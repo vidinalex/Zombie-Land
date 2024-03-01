@@ -86,6 +86,8 @@ public class ZombieController : MonoBehaviour, IDamagable
             _ragdollController.SetRagdoll(true);
         }
 
+        LevelManager.Default.ZombieKilled();
+
         Destroy(gameObject, 4f);
         this.enabled = false;
     }
