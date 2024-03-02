@@ -2293,6 +2293,10 @@ MonoBehaviour:
   _animator: {fileID: 3634533562752336716}
   _healthBarController: {fileID: 4843201664121642678}
   _ragdollController: {fileID: 774545565611436342}
+  _moneyInstance: {fileID: 6307847532088968834, guid: 0b334c5231f824ec4aaf9e65258db087, type: 3}
+  _dropChance: 2
+  _dropAmount: -2
+  _renderer: {fileID: 8802031020163950473}
 --- !u!114 &7527782082466273814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6589,7 +6593,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a9c66f4b2359cc045b4be663d295b02e, type: 2}
+  - {fileID: 2100000, guid: 3cfb3628fdfaf1b408f8aa0d3790033e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private List<LevelSettings> _settings;
     [SerializeField]
-    private TMP_Text _progressBarTextfield;
+    private TMP_Text _progressBarTextfield, _rewardTextfield;
     [SerializeField]
     private Image _progressBarFill;
     [SerializeField]
@@ -59,6 +59,8 @@ public class LevelManager : MonoBehaviour
         _currentZombieInstances++;
     }
 
+    private bool isAlreadyWin = false;
+
     public void ZombieKilled()
     {
         _currentFrags++;
@@ -66,6 +68,21 @@ public class LevelManager : MonoBehaviour
 
         UpdateProgressBar();
         SpawnZombie();
+
+        if (_currentFrags >= _targetFrags && !isAlreadyWin)
+        {
+            isAlreadyWin = true;
+            Win();
+        }
+    }
+
+    private void Win()
+    {
+        int currReward = _currentLevelSettings.Reward;
+        MoneyMenuController.Default.UpdateMoney(currReward);
+        _rewardTextfield.text = "+" + currReward;
+        Manager.Default.WinMenu();
+        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level", 0) + 1);
     }
 
     private void UpdateProgressBar()

@@ -1,16 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using Pathfinding;
+using System.Collections;
 using UnityEngine;
 
 public class ZombieController : MonoBehaviour, IDamagable
 {
-    [SerializeField] private float _maxHP, _attackSpeedTime, _damageAmount;
-    [SerializeField] private Animator _animator;
-    [SerializeField] private HealthBarController _healthBarController;
-    [SerializeField] private ZombieRagdollController _ragdollController;
+    [SerializeField]
+    private float
+        _maxHP,
+        _attackSpeedTime,
+        _damageAmount;
+    [SerializeField]
+    private Animator _animator;
+    [SerializeField]
+    private HealthBarController _healthBarController;
+    [SerializeField]
+    private ZombieRagdollController _ragdollController;
+    [SerializeField]
+    private GameObject _moneyInstance;
+    [SerializeField]
+    private int
+        _dropChance,
+        _dropAmount;
+    [SerializeField]
+    private Renderer _renderer;
 
-    private float _currentHP, currentAttackTime;
+    private float 
+        _currentHP, 
+        currentAttackTime;
     private Transform destinationTarget;
 
     private const float MIN_ATTACK_DIST = 2f, ATTACK_DELAY = 0.3f;
@@ -40,7 +56,7 @@ public class ZombieController : MonoBehaviour, IDamagable
     {
         currentAttackTime = _attackSpeedTime;
 
-        if(destinationTarget.TryGetComponent<IDamagable>(out IDamagable damageTarget))
+        if (destinationTarget.TryGetComponent<IDamagable>(out IDamagable damageTarget))
         {
             StartCoroutine(CDelayDamage(damageTarget, ATTACK_DELAY));
 
@@ -48,7 +64,7 @@ public class ZombieController : MonoBehaviour, IDamagable
                 return;
 
             _animator.SetTrigger("Attack");
-        }        
+        }
     }
 
     private IEnumerator CDelayDamage(IDamagable target, float delay)
@@ -70,7 +86,7 @@ public class ZombieController : MonoBehaviour, IDamagable
     {
         _currentHP -= _dmg;
 
-        if(_healthBarController)
+        if (_healthBarController)
             _healthBarController.ReciveDMG(_dmg, _maxHP);
 
         if (_currentHP <= 0)
@@ -86,9 +102,32 @@ public class ZombieController : MonoBehaviour, IDamagable
             _ragdollController.SetRagdoll(true);
         }
 
+        int tempChance = Random.Range(_dropChance, _dropAmount);
+
+        for (int i = 0; i < tempChance; i++)
+        {
+            Instantiate(_moneyInstance, transform.position, Quaternion.identity);
+        }
+
+        StartCoroutine(CDissolve());
         LevelManager.Default.ZombieKilled();
 
         Destroy(gameObject, 4f);
         this.enabled = false;
+    }
+
+    private IEnumerator CDissolve()
+    {
+        float timeElapsed = 0, duration = 2, startCutoffHeight = _renderer.material.GetFloat("_CutoffHeight");
+
+        while (timeElapsed < duration)
+        {
+            _renderer.material.SetFloat("_CutoffHeight", Mathf.Lerp(startCutoffHeight, 0, timeElapsed / duration));
+            timeElapsed += Time.unscaledDeltaTime;
+
+            yield return null;
+        }
+
+        Destroy(gameObject);
     }
 }

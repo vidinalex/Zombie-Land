@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff7d8148a92b564a96d920c0c695cdc, type: 3}
+  m_Name: LevelData2
+  m_EditorClassIdentifier: 
+  TargetFrags: 23
+  Reward: 600
+  ZombiePool:
+  - {fileID: 1393718583399508671, guid: 71ad49b21c9304b8da1b1b2ad693909b, type: 3}
+  - {fileID: 1393718583399508671, guid: 71ad49b21c9304b8da1b1b2ad693909b, type: 3}
+  - {fileID: 1393718583399508671, guid: 49d5db170293d034d9c6026faca7c5b0, type: 3}
+  - {fileID: 1393718583399508671, guid: a6e12d3a46cd96649ade7257f90072d3, type: 3}

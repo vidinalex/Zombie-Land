@@ -8,7 +8,12 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     private float _maxHP;
     [SerializeField]
     private HealthBarController _healthBarController;
+    [SerializeField]
+    private PlayerMovement _pm;
+    [SerializeField]
+    private PlayerShooting _ps;
 
+    private bool _isDead = false;
     private float _currentHP;
 
     private void Start()
@@ -18,7 +23,12 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 
     public void Die()
     {
-        throw new System.NotImplementedException();
+        _isDead = true;
+
+        _pm.enabled = false;
+        _ps.enabled = false;
+
+        Manager.Default.DefeatMenu();
     }
 
     public void RecieveDMG(float _dmg)
@@ -30,7 +40,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
         if (_healthBarController)
             _healthBarController.ReciveDMG(_dmg, _maxHP);
 
-        if (_currentHP <= 0)
+        if (_currentHP <= 0 && !_isDead)
         {
             Die();
         }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelSettings : ScriptableObject
 {
     public int TargetFrags;
+    public int Reward;
 
     public List<GameObject> ZombiePool;
 }

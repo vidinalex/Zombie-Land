@@ -10,7 +10,7 @@ public class Curtain : MonoBehaviour
     [SerializeField]
     private float _actionDuration;
 
-    private const float TARGET_END_SCALE = 10f;
+    private const float TARGET_END_SCALE = 5f;
 
     public void OpenCurtain()
     {
