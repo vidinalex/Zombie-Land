@@ -52,6 +52,7 @@ public class MenuManager : MonoBehaviour
         _stagesStack.Push(_stagesPool[0]);
 
         ApplyLevelState();
+        AudioManager.Default.PlayBGPreset(AudioManager.Presets.MMenu);
     }
 
     private void ApplyLevelState()
@@ -83,12 +84,16 @@ public class MenuManager : MonoBehaviour
         _stagesStack.Peek().SetActive(false);
         _stagesStack.Push(_stagesPool[index]);
         _stagesStack.Peek().SetActive(true);
+
+        AudioManager.Default.PlaySoundFXPreset(AudioManager.Presets.Click);
     }
 
     public void GoToBack()
     {
         _stagesStack.Pop().SetActive(false);
         _stagesStack.Peek().SetActive(true);
+
+        AudioManager.Default.PlaySoundFXPreset(AudioManager.Presets.Click);
     }
 
     public void StartGame()

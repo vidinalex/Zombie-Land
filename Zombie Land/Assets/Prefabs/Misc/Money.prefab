@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 6307847532088968834}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
-  m_LocalPosition: {x: 0.94825023, y: 0, z: 0}
+  m_LocalPosition: {x: -2429.4512, y: -0.20443457, z: 585.79724}
   m_LocalScale: {x: 500, y: 500, z: 500}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -287,3 +287,4 @@ MonoBehaviour:
   _initialMaxForce: 100
   _moneyAmount: 20
   _rb: {fileID: 2483910001539731064}
+  _audioClip: {fileID: 8300000, guid: 243fe6e634cbb754fb145cba91acfbfc, type: 3}

@@ -21,3 +21,5 @@ MonoBehaviour:
   _recoilStrength: 0
   _recoilDuration: 0
   _reciolFrequency: 0
+  ShotSound: {fileID: 8300000, guid: fba0ea77d852a4b4d8b2c8d7ca823cec, type: 3}
+  isAudioSingle: 1

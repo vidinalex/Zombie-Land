@@ -267,6 +267,7 @@ MonoBehaviour:
   _enemyTag: Enemy
   _bloodFX: {fileID: 1489431029902184, guid: 4430919f14c50f84085d287cbcb2c30e, type: 3}
   _impactFX: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
+  _weaponInfo: {fileID: 11400000, guid: bb99138d23aad42b69c483c229b6263c, type: 2}
 --- !u!1001 &3004091664856027971
 PrefabInstance:
   m_ObjectHideFlags: 0

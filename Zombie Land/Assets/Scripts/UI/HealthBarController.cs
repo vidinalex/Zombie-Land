@@ -27,7 +27,7 @@ public class HealthBarController : MonoBehaviour
         }
         catch
         {
-
+            
         }
 
         if(_popUpDMGInstance)

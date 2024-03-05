@@ -16,6 +16,8 @@ public class ContentElement : MonoBehaviour
     private GameObject[] _statePool;
     [SerializeField]
     private Button _BTN_Buy;
+    [SerializeField]
+    private SkinChangerPlaymode _skinChanger;
 
     private void OnEnable()
     {
@@ -51,6 +53,7 @@ public class ContentElement : MonoBehaviour
         if (isActive)
         {
             PlayerPrefs.SetInt(PREFS_NAME + PREFS_INDEX, 2);
+            AudioManager.Default.PlaySoundFXPreset(AudioManager.Presets.Click);            
         }
         else
         {
@@ -58,6 +61,7 @@ public class ContentElement : MonoBehaviour
         }
 
         UpdateCurrentState();
+        _skinChanger.UpdateSkin();
     }
 
     public void BuyElement()

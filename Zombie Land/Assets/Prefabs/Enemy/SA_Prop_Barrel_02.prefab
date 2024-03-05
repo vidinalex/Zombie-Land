@@ -121,3 +121,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explosionInstance: {fileID: 2772378543286543728, guid: 26436ec7d861b4c4c8f155257d7c2ffb, type: 3}
   _explosionVFX: {fileID: 1757550589666010878, guid: 04eb585e290dc479285bcbc044e5575f, type: 3}
+  _explosionClip: {fileID: 8300000, guid: 6a24251e2c8e96c4697d8d0c68fcb424, type: 3}

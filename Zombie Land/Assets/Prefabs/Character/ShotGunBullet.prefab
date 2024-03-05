@@ -266,6 +266,7 @@ MonoBehaviour:
   _enemyTag: Enemy
   _bloodFX: {fileID: 1489431029902184, guid: 4430919f14c50f84085d287cbcb2c30e, type: 3}
   _impactFX: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
+  _weaponInfo: {fileID: 11400000, guid: 846c8e2555bd24840a8d2517b32a36ac, type: 2}
 --- !u!1 &1944690875294171388
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +533,7 @@ MonoBehaviour:
   _enemyTag: Enemy
   _bloodFX: {fileID: 1489431029902184, guid: 4430919f14c50f84085d287cbcb2c30e, type: 3}
   _impactFX: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
+  _weaponInfo: {fileID: 11400000, guid: 846c8e2555bd24840a8d2517b32a36ac, type: 2}
 --- !u!1 &1985097098513259226
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,6 +800,7 @@ MonoBehaviour:
   _enemyTag: Enemy
   _bloodFX: {fileID: 1489431029902184, guid: 4430919f14c50f84085d287cbcb2c30e, type: 3}
   _impactFX: {fileID: 1180248314969840, guid: 101d62f0a3e4fef4eab61adb79c845df, type: 3}
+  _weaponInfo: {fileID: 11400000, guid: 846c8e2555bd24840a8d2517b32a36ac, type: 2}
 --- !u!1 &8245602968955789000
 GameObject:
   m_ObjectHideFlags: 0

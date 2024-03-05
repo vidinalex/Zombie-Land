@@ -8,6 +8,9 @@ public class Bullet : MonoBehaviour
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private string _enemyTag;
     [SerializeField] private GameObject _bloodFX, _impactFX;
+    [SerializeField] private WeaponParams _weaponInfo;
+
+    private string PREFS_WEAPON_NAME = "Weapon", PREFS_UPGRADE_NAME = "Upgrade";
 
     private void Start()
     {
@@ -24,7 +27,7 @@ public class Bullet : MonoBehaviour
 
             if(collision.gameObject.TryGetComponent<IDamagable>(out IDamagable _IDamagable))
             {
-                _IDamagable.RecieveDMG(_dmg);
+                _IDamagable.RecieveDMG(_weaponInfo.InitialDMG + (_weaponInfo.DamageMod * PlayerPrefs.GetInt(PREFS_WEAPON_NAME + _weaponInfo.Index + PREFS_UPGRADE_NAME + 0)));
             }
         }
         else

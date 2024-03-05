@@ -15,9 +15,11 @@ MonoBehaviour:
   Index: 5
   InitialAmmoAmount: 500
   AmmoAmountMod: 200
-  InitialDMG: 5
+  InitialDMG: 10
   DamageMod: 3
   _attackSpeed: 0.05
   _recoilStrength: 0.6
   _recoilDuration: 0.1
   _reciolFrequency: 1.3
+  ShotSound: {fileID: 8300000, guid: 2dbac4eaa973fe549b712b96ef183b2c, type: 3}
+  isAudioSingle: 0

@@ -8,10 +8,11 @@ public class WeaponInfo : MonoBehaviour
     public WeaponStruct.WeaponInfoStruct _weaponInfo;
 
     private int _currentAmmo;
+    private string PREFS_WEAPON_NAME = "Weapon", PREFS_UPGRADE_NAME = "Upgrade";
 
     private void Awake()
     {
-        _currentAmmo = _weaponInfo._weaponParams.InitialAmmoAmount;
+        _currentAmmo = _weaponInfo._weaponParams.InitialAmmoAmount + (_weaponInfo._weaponParams.AmmoAmountMod * PlayerPrefs.GetInt(PREFS_WEAPON_NAME + _weaponInfo._weaponParams.Index + PREFS_UPGRADE_NAME + 1));
     }
 
     public void ReduceAmmo(int amount)

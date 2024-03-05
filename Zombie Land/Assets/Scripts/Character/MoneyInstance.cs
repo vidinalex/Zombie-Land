@@ -14,6 +14,8 @@ public class MoneyInstance : MonoBehaviour
     private int _moneyAmount;
     [SerializeField]
     private Rigidbody _rb;
+    [SerializeField]
+    private AudioClip _audioClip;
 
     private Transform _plTransformPos;
     private const string PLAYER_TAG = "Player";
@@ -34,7 +36,7 @@ public class MoneyInstance : MonoBehaviour
     {
         if(other.tag == PLAYER_TAG)
         {
-            StartCoroutine(CFlyTowardsPlayer());
+            StartCoroutine(CFlyTowardsPlayer());            
         }
     }
 
@@ -50,6 +52,7 @@ public class MoneyInstance : MonoBehaviour
             if(Vector3.Distance(transform.position, _plTransformPos.position) < 1f)
             {
                 MoneyMenuController.Default.UpdateMoney(_moneyAmount);
+                AudioManager.Default.PlaySoundFXAtPoint(_audioClip, transform);
                 Destroy(gameObject);
             }
 

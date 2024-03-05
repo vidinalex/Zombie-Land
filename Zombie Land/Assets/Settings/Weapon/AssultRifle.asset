@@ -21,3 +21,4 @@ MonoBehaviour:
   _recoilStrength: 0.6
   _recoilDuration: 0.1
   _reciolFrequency: 1.3
+  ShotSound: {fileID: 8300000, guid: 125a5e7050a5221409013e6b4bc48907, type: 3}

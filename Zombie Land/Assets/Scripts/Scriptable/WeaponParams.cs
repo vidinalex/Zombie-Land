@@ -12,4 +12,7 @@ public class WeaponParams : ScriptableObject
     public int DamageMod;
 
     public float _attackSpeed, _recoilStrength, _recoilDuration, _reciolFrequency;
+
+    public AudioClip ShotSound;
+    public bool isAudioSingle;
 }

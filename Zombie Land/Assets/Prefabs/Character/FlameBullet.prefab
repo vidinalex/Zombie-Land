@@ -121,6 +121,7 @@ MonoBehaviour:
   _dmg: 1
   _lifeTime: 0.1
   _enemyTag: Enemy
+  _weaponInfo: {fileID: 11400000, guid: 46a650d2b06a84d26a4f964d9a2145cd, type: 2}
 --- !u!1 &8159121826360767827
 GameObject:
   m_ObjectHideFlags: 0

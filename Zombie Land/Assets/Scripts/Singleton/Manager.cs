@@ -37,6 +37,8 @@ public class Manager : MonoBehaviour
         _curtain.CloseCurtain();
         _curtain.OnClose += ResumeTime;
         _defeatCurtain.OnOpen += PauseTime;
+
+        AudioManager.Default.PlayBGPreset(AudioManager.Presets.Game);
     }
 
     public Camera GetMainCamera()
