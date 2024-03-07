@@ -27,12 +27,20 @@ public class WeaponHolder : MonoBehaviour
     [ContextMenu("Next Weapon")]
     private void NextWeapon()
     {
-        SwapWeapon(++_currentWeapon);
+        do {
+            _currentWeapon++;
+        }
+        while (PlayerPrefs.GetInt("Weapon" + _currentWeapon % _weaponInstances.Length) != 1);
+        SwapWeapon(_currentWeapon);
     }
     [ContextMenu("Previous Weapon")]
     private void PreviousWeapon()
     {
-        _currentWeapon += _weaponInstances.Length - 1;
+        do
+        {
+            _currentWeapon += _weaponInstances.Length - 1;
+        }
+        while (PlayerPrefs.GetInt("Weapon" + _currentWeapon % _weaponInstances.Length) != 1);
         SwapWeapon(_currentWeapon);
     }
     public void SwapWeapon(int _weaponIndex)

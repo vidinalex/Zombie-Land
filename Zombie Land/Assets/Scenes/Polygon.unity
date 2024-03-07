@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465788, g: 0.49641287, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1997,6 +1997,7 @@ MonoBehaviour:
   - {fileID: 1595042864}
   - {fileID: 756917439}
   - {fileID: 1100748219}
+  _ragdollRbs: []
   _characterAnimator: {fileID: 968737381}
   _characterAIPath: {fileID: 968737376}
   _characterMainCollider: {fileID: 968737380}
@@ -2114,8 +2115,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHP: 100
+  _attackSpeedTime: 0
+  _damageAmount: 0
+  _animator: {fileID: 0}
   _healthBarController: {fileID: 1252485614}
   _ragdollController: {fileID: 968737373}
+  _moneyInstance: {fileID: 0}
+  _dropChance: 0
+  _dropAmount: 0
+  _renderer: {fileID: 0}
 --- !u!54 &968737379
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2306,6 +2314,7 @@ MonoBehaviour:
   - {fileID: 879911147}
   - {fileID: 970541100}
   - {fileID: 2115303832}
+  _ragdollRbs: []
   _characterAnimator: {fileID: 989166686}
   _characterAIPath: {fileID: 989166681}
   _characterMainCollider: {fileID: 989166685}
@@ -2423,8 +2432,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHP: 100
+  _attackSpeedTime: 0
+  _damageAmount: 0
+  _animator: {fileID: 0}
   _healthBarController: {fileID: 1532562160}
   _ragdollController: {fileID: 989166678}
+  _moneyInstance: {fileID: 0}
+  _dropChance: 0
+  _dropAmount: 0
+  _renderer: {fileID: 0}
 --- !u!54 &989166684
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2661,6 +2677,17 @@ CapsuleCollider:
   m_Height: 0.4403004
   m_Direction: 0
   m_Center: {x: 0.2201502, y: 0, z: 0}
+--- !u!114 &1064453239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3279758297992401739, guid: bf7620377ae470544bab191db6438294, type: 3}
+  m_PrefabInstance: {fileID: 4265274647460760601}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9dba40bc37934e9885383898b0df242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1064659364 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 187932, guid: 4c55634be023e4d40ba3a85407347daf, type: 3}
@@ -4649,6 +4676,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 377028551453703769, guid: bf7620377ae470544bab191db6438294, type: 3}
+      propertyPath: _weaponInstances.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 377028551453703769, guid: bf7620377ae470544bab191db6438294, type: 3}
+      propertyPath: _weaponInstances.Array.data[6]
+      value: 
+      objectReference: {fileID: 1064453239}
+    - target: {fileID: 3649520422258701765, guid: bf7620377ae470544bab191db6438294, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.990382
+      objectReference: {fileID: 0}
     - target: {fileID: 6748430333770045599, guid: bf7620377ae470544bab191db6438294, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4692,6 +4731,10 @@ PrefabInstance:
     - target: {fileID: 7352906228738812355, guid: bf7620377ae470544bab191db6438294, type: 3}
       propertyPath: m_Name
       value: Player Setup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7701008828193225239, guid: bf7620377ae470544bab191db6438294, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.990382
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

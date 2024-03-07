@@ -19,7 +19,7 @@ public class WeaponInfo : MonoBehaviour
     {
         _currentAmmo -= amount;
 
-        UIWeaponManager.Default.UpdateFillAmount(_weaponInfo._weaponParams.Index, _weaponInfo._weaponParams.InitialAmmoAmount, _currentAmmo);
+        UIWeaponManager.Default.UpdateFillAmount(_weaponInfo._weaponParams.Index, _weaponInfo._weaponParams.InitialAmmoAmount + (_weaponInfo._weaponParams.AmmoAmountMod * PlayerPrefs.GetInt(PREFS_WEAPON_NAME + _weaponInfo._weaponParams.Index + PREFS_UPGRADE_NAME + 1)), _currentAmmo);
     }
 
     public bool IsAbleToShoot()

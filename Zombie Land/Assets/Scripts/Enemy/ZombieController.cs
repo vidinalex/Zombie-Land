@@ -116,6 +116,18 @@ public class ZombieController : MonoBehaviour, IDamagable
         this.enabled = false;
     }
 
+    public void DieWithoutCallback()
+    {
+        if (_ragdollController)
+        {
+            _ragdollController.SetRagdoll(true);
+            StartCoroutine(CDissolve());
+
+            Destroy(gameObject, 4f);
+            this.enabled = false;
+        }
+    }
+
     private IEnumerator CDissolve()
     {
         float timeElapsed = 0, duration = 2, startCutoffHeight = _renderer.material.GetFloat("_CutoffHeight");

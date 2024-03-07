@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,13 +20,15 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private List<LevelSettings> _settings;
     [SerializeField]
+    private Transform _playerTransform;
+    [SerializeField]
     private TMP_Text _progressBarTextfield, _rewardTextfield;
     [SerializeField]
     private Image _progressBarFill;
     [SerializeField]
     private int _maxZombieInstances;
     [SerializeField]
-    private Transform[] _spawnPoints;
+    private Transform[] _spawnPoints, _plSpawnPoints;
 
     private int
         _targetFrags,
@@ -49,6 +53,8 @@ public class LevelManager : MonoBehaviour
         {
             SpawnZombie();
         }
+
+        _playerTransform.position = _plSpawnPoints[Random.Range(0, _plSpawnPoints.Length)].position;
 
         UpdateProgressBar();
     }
@@ -81,8 +87,27 @@ public class LevelManager : MonoBehaviour
         int currReward = _currentLevelSettings.Reward;
         MoneyMenuController.Default.UpdateMoney(currReward);
         _rewardTextfield.text = "+" + currReward;
-        Manager.Default.WinMenu();
         PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level", 0) + 1);
+
+        List<GameObject> tempZombies = GameObject.FindGameObjectsWithTag("Enemy").ToList();
+        foreach (GameObject zombie in tempZombies)
+        {
+            if(zombie.TryGetComponent<ZombieController>(out ZombieController tempZC))
+            {
+                tempZC.DieWithoutCallback();
+            }
+            
+        }
+
+        StartCoroutine(CWin());
+    }
+
+    private IEnumerator CWin()
+    {
+        yield return new WaitForSecondsRealtime(2f);
+        Manager.Default.WinMenu();
+        yield return new WaitForSecondsRealtime(2f);
+        Time.timeScale = 0f;
     }
 
     private void UpdateProgressBar()

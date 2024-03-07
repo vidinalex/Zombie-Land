@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
     {
         _default = this;
 
-        Application.targetFrameRate = 300;
+        Application.targetFrameRate = 60;
 
         if (PlayerPrefs.GetInt(PREFS_FIRST_LAUNCH, 0) == 0)
         {
@@ -23,12 +23,16 @@ public class MenuManager : MonoBehaviour
             PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 1, 1);
             PlayerPrefs.SetInt(PREFS_SKIN_NAME + 0, 2);
             PlayerPrefs.SetInt("Money", 40000);
-            PlayerPrefs.SetInt("Level", 5);
+            //PlayerPrefs.SetInt("Level", 5);
 
-            //PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 2, 1);
-            //PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 3, 1);
-            //PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 4, 1);
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 2, 1);
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 3, 1);
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 4, 1);
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 5, 1);
+            PlayerPrefs.SetInt(PREFS_WEAPON_NAME + 6, 1);
         }
+
+        PlayerPrefs.SetInt("Weapon5", 0);
     }
     #endregion
 
