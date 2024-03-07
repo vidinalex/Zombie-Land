@@ -31,7 +31,7 @@ public class PlayerShooting : MonoBehaviour
         _currentWeaponInfo = _weaponInfo;
 
         UIWeaponManager.Default.SetActiveWeapon(_currentWeaponInfo._weaponInfo._weaponParams.Index);
-        _elapsedTime = 0;
+        _elapsedTime = 0.5f;
 
         AudioManager.Default.PlaySoundFXAtPoint(_clipReload, transform);
         AudioManager.Default.DestroySingleSources();
